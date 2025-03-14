@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .modelos import models, serializers
+from kutsaApp.modelos import models, serializers
 
 
 class BibliotecaAPIView(APIView):
