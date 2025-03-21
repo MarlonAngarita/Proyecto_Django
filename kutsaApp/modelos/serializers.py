@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from modelos import models
+from kutsaApp.modelos import models
 
 class BibliotecaSerializer(serializers.ModelSerializer):
     class Meta:

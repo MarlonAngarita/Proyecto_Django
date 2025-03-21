@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from kutsaApp.routers import app_routes
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    *app_routes,
 ]
