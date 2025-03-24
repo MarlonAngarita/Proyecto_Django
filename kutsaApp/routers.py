@@ -13,13 +13,13 @@ from kutsaApp.views import UsuarioAPIView
 
 app_routes = [
     path('biblioteca/', BibliotecaAPIView.as_view(), name='Biblioteca'),
-    path('categotias/', CategoriaAPIView, name='Categoria'),
-    path('cursos/', CursoAPIView, name='Cursos'),
-    path('detallecontenido/', DetalleContenidoAPIView, name='DetalleCurso'),
-    path('detallecuso/', DetalleCursoAPIView, name='DetalleCurso'),
-    path('foro/', ForoAPIView, name='Foro'),
-    path('modulos/', ModulosAPIView, name='Modulos'),
-    path('quiz/', QuizAPIView, name='Quiz'),
-    path('rol/', RolesAPIView, name='Roles'),
-    path('usuarios/', UsuarioAPIView, name='Usuarios'),
+    path('categotias/', CategoriaAPIView.as_view(), name='Categoria'),
+    path('cursos/', CursoAPIView.as_view(), name='Cursos'),
+    path('detallecontenido/', DetalleContenidoAPIView.as_view(), name='DetalleCurso'),
+    path('detallecuso/', DetalleCursoAPIView.as_view(), name='DetalleCurso'),
+    path('foro/', ForoAPIView.as_view(), name='Foro'),
+    path('modulos/', ModulosAPIView.as_view(), name='Modulos'),
+    path('quiz/', QuizAPIView.as_view(), name='Quiz'),
+    path('rol/', RolesAPIView.as_view(), name='Roles'),
+    path('usuarios/', UsuarioAPIView.as_view(), name='Usuarios'),
 ]
