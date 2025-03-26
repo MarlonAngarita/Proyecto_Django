@@ -29,6 +29,7 @@ const AppRutas = () => {
       {/* Ruta para páginas no encontradas */}
       <Route path="*" element={<NoEncontrado />} />
     </Routes>
+    
   );
 };
 

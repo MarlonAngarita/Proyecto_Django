@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc"; // Icono de Google
+import UsuariosPost from "../api/apiService";
 
 const Registro = () => {
   const navigate = useNavigate(); // Hook para navegar entre páginas
@@ -10,10 +11,11 @@ const Registro = () => {
   const [formData, setFormData] = useState({
     nombres: "",
     apellidos: "",
-    nombreUsuario: "",
     email: "",
     password: "",
     confirmPassword: "",
+    identificación: "",
+    perfil:"",
   });
 
   // Estados para manejar errores en la contraseña
@@ -23,6 +25,7 @@ const Registro = () => {
   // Estados para mostrar/ocultar contraseña
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showPerfil, setShowPerfil] = useState(false);
 
   // Manejar cambios en los inputs
   const handleChange = (e) => {
@@ -41,8 +44,8 @@ const Registro = () => {
   // Validar la contraseña
   const validarPassword = (password) => {
     // Expresión regular: mínimo 8, máximo 15 caracteres, al menos una letra, un número y un carácter especial
-    const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]).{8,15}$/;
-    setErrorPassword(regex.test(password) ? "" : "Debe tener entre 8 y 15 caracteres, incluir al menos una letra, un número y un carácter especial.");
+    const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]).{8,8}$/;
+    setErrorPassword(regex.test(password) ? "" : "Debe tener maximo 8 caracteres, incluir al menos una letra, un número y un carácter especial.");
   };
 
   // Validar la confirmación de contraseña
@@ -51,7 +54,7 @@ const Registro = () => {
   };
 
   // Manejar el envío del formulario
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Si hay errores en las contraseñas, no enviar el formulario
@@ -60,12 +63,16 @@ const Registro = () => {
       return;
     }
 
-    alert("Registro exitoso"); // Mensaje de confirmación
-
-    // Redirigir a la página de inicio de sesión después de 0.5 segundos
-    setTimeout(() => {
+    try{
+      const response = await UsuariosPost(formData);
+      alert("Registro exitoso" + response.message);
+      // Redirigir a la página de inicio de sesión después de 0.5 segundos
+      setTimeout(() => {
       navigate("/iniciar-sesion");
     }, 500);
+    }catch{
+      alert("Hubo un error al registrarse. Intenta nuevamente.");
+    }
   };
 
   return (
@@ -92,8 +99,8 @@ const Registro = () => {
 
           {/* Campo: Nombre de Usuario */}
           <div>
-            <label className="block text-gray-700 font-semibold">Nombre de Usuario</label>
-            <input type="text" name="nombreUsuario" value={formData.nombreUsuario} onChange={handleChange} required className="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Usuario123" />
+            <label className="block text-gray-700 font-semibold">Identificación</label>
+            <input type="text" name="identificacion" value={formData.identificación} onChange={handleChange} required className="w-full p-2 border border-gray-300 rounded mt-1" placeholder="123456789" />
           </div>
 
           {/* Campo: Correo Electrónico */}
@@ -124,6 +131,17 @@ const Registro = () => {
               </button>
             </div>
             {errorConfirmPassword && <p className="text-red-500 text-sm mt-1">{errorConfirmPassword}</p>}
+          </div>
+          {/* Campo: Perfil */}
+          <div>
+          <label className="block text-gray-700 font-semibold">Perfil</label>
+          <div className="relative">
+            <input list="perfiles" type={showPerfil ? "text" : "perfil"} name="perfil" value={formData.perfil} onClick={() => setShowPerfil(!showPerfil)} onChange={handleChange} required className="w-full p-2 border border-gray-300 rounded mt-1 pr-10" placeholder="seleccione una opción"/>
+            <datalist id="perfiles">
+              <option value="aprendiz"></option>
+              <option value="maestro"></option>
+            </datalist>
+          </div>
           </div>
 
           {/* Botón de registro */}
