@@ -57,7 +57,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',  # Dominio de tu aplicación React
+    'http://localhost:3000',  # Dominio de tu aplicación React
 ]
 
 ROOT_URLCONF = 'kutsa.urls'
