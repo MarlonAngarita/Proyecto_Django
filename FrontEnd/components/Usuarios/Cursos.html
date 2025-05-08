@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cursos Disponibles</title>
+  <link rel="stylesheet" href="/assets/Usuarios/Cursos.css" />
+</head>
+<body>
+
+  <!-- Modal que muestra los detalles completos de un curso -->
+  <div id="modal-detalles" class="modal">
+    <div class="modal-contenido">
+      <button class="modal-cerrar" id="cerrar-detalles">X</button>
+      <h2 id="titulo-curso"></h2>
+      <p><strong>Descripción:</strong> <span id="descripcion-curso"></span></p>
+      <p><strong>Contenido:</strong> <span id="contenido-curso"></span></p>
+      <div class="modal-botones">
+        <button id="btn-inscribirme">Inscribirme</button>
+        <button id="btn-ver-mas-modal">Ver más</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de confirmación de inscripción -->
+  <div id="modal-confirmacion" class="modal">
+    <div class="modal-contenido">
+      <p id="mensaje-modal">¿Deseas inscribirte al curso?</p>
+      <div class="modal-botones">
+        <button id="btn-confirmar">Cerrar</button>
+      </div>
+    </div>
+  </div>  
+
+  <!-- Modal ya inscrito -->
+  <div id="modal-ya-inscrita" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrar-ya-inscrita" class="cerrar">&times;</span>
+      <p>Ya estás inscrito en este curso.</p>
+    </div>
+  </div>
+
+  <!-- Encabezado principal con pestañas -->
+  <header>
+    <h1>Cursos</h1>
+    <div class="tabs">
+      <button id="btn-disponibles" class="tab active">Cursos disponibles</button>
+      <button id="btn-inscritos" class="tab">Cursos inscritos</button>
+    </div>
+  </header>
+  
+  <!-- Sección de cursos disponibles -->
+  <section id="cursos-disponibles-section">
+    <div id="cursos-container">
+      <!-- Tarjetas insertadas dinámicamente -->
+    </div>
+  </section>
+
+  <!-- Sección de cursos inscritos -->
+  <section id="cursos-inscritos-section" style="display: none;">
+    <h2 id="mensaje-vacio">Actualmente no te encuentras inscrito a ningún curso</h2>
+    <div id="cursos-inscritos-container" class="inscritos-container">
+      <!-- Tarjetas generadas dinámicamente -->
+    </div>
+  </section>  
+
+  <script type="module" src="../Ecursos.js"></script>
+</body>
+</html>

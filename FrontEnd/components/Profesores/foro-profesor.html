@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Profesores</title>
+    <link rel="stylesheet" href="/assets/Profesores/foro-profesor.css">
+</head>
+<body>
+    <header>
+        <h1>Foro de Profesores</h1>
+    </header>
+
+    <main>
+        <!-- Sección para crear publicación -->
+        <section class="crear-post">
+            <h2>Crear una publicación</h2>
+            <input type="text" id="titulo-post" placeholder="Título de la publicación">
+            <textarea id="contenido-post" placeholder="Escribe tu publicación aquí..."></textarea>
+            <button id="publicar-btn">Enviar</button>
+        </section>
+
+        <!-- Sección para ver y moderar publicaciones -->
+        <section class="publicaciones">
+            <h2>Publicaciones de Estudiantes y Profesores</h2>
+            <div id="post-list">
+                <!-- Publicación de ejemplo con botón de eliminar -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://img.freepik.com/vector-premium/entrenador-fitness-imagen-vectorial-icono-femenino-puede-usar-profesiones_120816-263153.jpg?w=740" alt="Usuario 1">
+                        <p><strong>Usuario 1</strong> - Hace 5 min</p>
+                    </div>
+                    <p>Este foro es increíble, ¿qué opinan?</p>
+                    <div class="acciones">
+                        <button class="delete-btn">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="foro-profesor.js"></script>
+</body>
+</html>

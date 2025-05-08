@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalles del Curso</title>
+  <link rel="stylesheet" href="/assets/Usuarios/DetalleCurso.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Detalles del Curso</h1>
+  </header>
+
+  <section id="detalle-curso">
+    <h2 id="nombre-curso" class="curso-titulo">Nombre del Curso</h2>
+    <p><strong>Descripción:</strong></p>
+    <p id="descripcion-curso">Aquí va la descripción del curso seleccionado.</p>
+    <p><strong>Contenido:</strong></p>
+    <ul id="contenido-curso"></ul>
+
+    <div id="acciones-curso">
+      <!-- Aquí se muestra dinámicamente:
+           - El botón "Inscribirme" si no está inscrito.
+           - La barra de progreso si ya está inscrito.
+           - El botón para retirarse si aplica.
+       -->
+    </div>
+  </section>
+
+  <!-- Modal de confirmación de inscripción -->
+  <div id="modalConfirmacionInscripcion" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarModalInscripcion" class="cerrar">&times;</span>
+      <p>¡Te has inscrito correctamente en el curso!</p>
+    </div>
+  </div>
+
+  <!-- Modal de confirmación de retiro -->
+  <div id="modalConfirmarRetiro" class="modal">
+    <div class="modal-contenido">
+      <p>¿Estás seguro que deseas retirarte del curso?</p>
+      <div style="margin-top: 20px;">
+        <button id="confirmarRetiro" class="btn-ver-mas">Aceptar</button>
+        <button id="cancelarRetiro" class="btn-ver-mas" style="background-color: gray;">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../datoscursos.js"></script>
+  <script src="../Edetalles.js"></script>
+</body>
+</html>

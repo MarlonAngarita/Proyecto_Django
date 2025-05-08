@@ -1,0 +1,136 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #EDEDED;
+}
+
+/* Encabezado con fondo azul */
+header {
+    background-color: #2607F2;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Sección de detalles del curso */
+#detalle-curso {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtítulo del curso */
+.curso-titulo {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #2607F2;
+    margin: 0.5rem 0 1rem;
+}
+
+/* Barra de progreso */
+.progreso-barra {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 0.8rem;
+    height: 20px;
+}
+
+.progreso-barra-interno {
+    height: 100%;
+    background-color: #2607F2;
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 20px;
+    padding-left: 15px;
+}
+
+/* Botón de volver */
+.boton-volver {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Botón estilo "Ver más" usado como "Volver" */
+.btn-ver-mas {
+    background-color: #2607F2;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-ver-mas:hover {
+    background-color: #7407F2;
+}
+
+/* Modal de confirmación */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contenido {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Contenedor para alinear botones horizontalmente */
+.botones-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* NUEVO: Contenedor opcional para los botones de inscribirse/volver alineados horizontalmente */
+#acciones-curso .botones-horizontales {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* NUEVO: Asegura tamaño mínimo de botones */
+#acciones-curso .botones-horizontales button {
+    min-width: 120px;
+}

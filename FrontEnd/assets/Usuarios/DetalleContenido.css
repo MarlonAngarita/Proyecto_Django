@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EDEDED;
+    color: #7407F2;
+  }
+  
+  .navbar {
+    background-color: #2607F2;
+    color: #EDEDED;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .footer {
+    background-color: #2607F2;
+    color: #EDEDED;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .contenido {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .selector {
+    margin-bottom: 1.5rem;
+  }
+  
+  .selector label {
+    font-weight: bold;
+    margin-right: 1rem;
+    color: #2607F2;
+  }
+  
+  .selector select {
+    padding: 0.5rem;
+    border: 2px solid #7407F2;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #7407F2;
+    font-size: 1rem;
+  }
+  
+  .buscador {
+    margin-bottom: 1.5rem;
+  }
+  
+  .buscador input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #7407F2;
+    border-radius: 5px;
+    color: #7407F2;
+  }
+  
+  .detalle h2 {
+    color: #7407F2;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .detalle p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detalle h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #2607F2;
+  }
+  
+  #lista-modulos {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    color: #444;
+  }
+  
+  #lista-modulos li {
+    margin-bottom: 0.5rem;
+  }
+  

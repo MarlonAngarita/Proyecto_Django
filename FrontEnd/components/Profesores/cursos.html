@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Cursos</title>
+  <link rel="stylesheet" href="/assets/Profesores/cursos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Mis Cursos</h1>
+  </header>
+
+  <section id="mis-cursos-section">
+    <div id="mis-cursos-container">
+      <!-- Tarjeta fija para crear curso -->
+      <div class="curso-card crear-curso" id="crear-curso">
+        <button id="btn-crear-curso">+</button>
+        <p>Crear Curso</p>
+      </div>
+      <!-- Aquí se insertarán dinámicamente los cursos creados -->
+    </div>
+  </section>
+
+  <!-- Botones flotantes -->
+  <div class="fab-container">
+    <div class="fab-buttons-wrapper">
+      <div class="fab-action-wrapper">
+        <span class="fab-label">Menú Principal</span>
+        <button class="fab-action" id="btn-menu">🏠</button>
+      </div>
+      <div class="fab-action-wrapper">
+        <span class="fab-label">Crear Curso</span>
+        <button class="fab-action" id="btn-crear">📝</button>
+      </div>
+      <div class="fab-action-wrapper">
+        <span class="fab-label">Categoría</span>
+        <button class="fab-action" id="btn-categoria">📂</button>
+      </div>
+      <div class="fab-action-wrapper">
+        <span class="fab-label">Foro</span>
+        <button class="fab-action" id="btn-foro">💬</button>
+      </div>
+    </div>
+    <button class="fab-main">+</button>
+  </div>
+
+  <!-- Modal de creación de curso -->
+  <div id="modal-crear-curso" class="hidden">
+    <button class="modal-close">✖</button>
+    <div class="modal-content">
+      <h2>Crear Nuevo Curso</h2>
+      <form id="form-crear-curso">
+        <label for="curso-nombre">Nombre del Curso:</label>
+        <input type="text" id="curso-nombre" required>
+
+        <label for="curso-descripcion">Descripción:</label>
+        <textarea id="curso-descripcion" required></textarea>
+
+        <label for="curso-contenido">Contenido:</label>
+        <textarea id="curso-contenido" required></textarea>
+
+        <div class="modal-buttons">
+          <button type="submit">Guardar</button>
+          <button type="button" id="cerrar-modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Detalles de Curso -->
+  <div id="modal-detalles" class="modal hidden">
+    <button class="modal-close">✖</button>
+    <div class="modal-contenido">
+      <h2 id="detalle-nombre">Nombre del Curso</h2>
+      <p id="detalle-descripcion">Aquí va la descripción...</p>
+      <p id="detalle-contenido">Aquí va el contenido del curso...</p>
+      <button class="btn-inscribirme">Inscribirme</button>
+    </div>
+  </div>
+
+  <script type="module" src="../Pcursos.js" defer></script>
+</body>
+</html>

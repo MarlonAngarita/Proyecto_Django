@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle del Contenido</title>
+  <link rel="stylesheet" href="/assets/Usuarios/DetalleContenido.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Detalle del Contenido</h1>
+  </nav>
+
+  <main class="contenido">
+    <div class="selector">
+      <label for="contenidoSelect">Selecciona un tema:</label>
+      <select id="contenidoSelect">
+        <option value="poo">Programación Orientada a Objetos</option>
+        <option value="estructuras">Estructuras de Datos</option>
+        <option value="funcional">Programación Funcional</option>
+      </select>
+    </div>
+
+    <div class="buscador">
+      <input type="text" id="buscadorModulos" placeholder="Buscar módulo..." />
+    </div>
+
+    <div class="detalle">
+      <h2 id="nombre-contenido"></h2>
+      <p><strong>Biblioteca / Lenguaje:</strong> <span id="biblioteca"></span></p>
+      <h3>Módulos:</h3>
+      <ul id="lista-modulos"></ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Biblioteca de Kustartcode. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="srcipt1.js"></script>
+</body>
+</html>

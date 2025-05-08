@@ -1,0 +1,92 @@
+/* Estilos generales para la vista de Profesores*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #EDEDED;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #2607F2;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+/* Contenedor principal de las tarjetas */
+.menu-principal {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  padding: 2rem;
+}
+
+/* Contenedor de las tarjetas */
+.menu-tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Diseño de cada tarjeta */
+.tarjeta {
+  background-color: #ffffff;
+  border: 2px solid #2607F2;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 300px; /* Ancho fijo para las tarjetas */
+}
+
+.tarjeta h3 {
+  font-size: 1.5rem;
+  color: #6200ea;
+  margin: 0;
+}
+
+.tarjeta:hover {
+  background-color: #F4F4F4;
+  transform: scale(1.05);
+}
+
+/* Contenedor general para mejor presentación */
+.detalle-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsivo para pantallas más grandes */
+@media (min-width: 768px) {
+  .menu-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

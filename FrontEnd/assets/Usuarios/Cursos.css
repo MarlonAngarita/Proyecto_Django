@@ -1,0 +1,298 @@
+/* 🎨 Estilos generales para la vista Ecursos.html */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #EDEDED;
+}
+
+/* Encabezado */
+header {
+  background-color: #2607F2;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Contenedor de tarjetas de cursos disponibles */
+#cursos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Estilo de tarjetas de curso */
+.curso-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.curso-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progreso-barra {
+  background-color: #c8cad3;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progreso-barra-interno {
+  background-color: #2607F2;
+  height: 100%;
+  color: white;
+  font-size: 12px;
+  text-align: left;
+  padding-left: 9px;
+  line-height: 20px;
+  border-radius: 20px 0 0 20px;
+  transition: width 0.4s ease;
+}
+
+/* Tarjetas de cursos inscritos */
+.inscrito-card,
+.curso-inscrito {
+  background: #2607f235;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.curso-inscrito:hover {
+  transform: scale(1.02);
+}
+
+/* Botón "Ver más" dentro de las tarjetas */
+.btn-ver-mas {
+  background-color: #2607F2;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-ver-mas:hover {
+  background-color: #7407F2;
+}
+
+/* Modal general */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Contenido dentro del modal */
+.modal-contenido {
+  position: relative;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+/* Botón para cerrar los modales */
+.modal-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-cerrar:hover {
+  color: #333;
+}
+
+/* Contenedor de botones en el modal */
+.modal-botones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Botón "Inscribirme" */
+#btn-inscribirme {
+  background-color: #2607F2;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+#btn-inscribirme:hover {
+  background-color: #7407F2;
+}
+
+/* Botón "Ver más" del modal */
+#btn-ver-mas-modal {
+  background-color: #2607F2;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn-ver-mas-modal:hover {
+  background-color: #7407F2;
+}
+
+/* Botón "Confirmar" del modal de inscripción */
+#btn-confirmar {
+  background-color: #2607F2;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+#btn-confirmar:hover {
+  background-color: #7407F2;
+}
+
+#modal-ya-inscrita  {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-contenido {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  position: fixed;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Sección de cursos inscritos */
+#cursos-inscritos-section {
+  background-color: #EDEDED;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+/* Contenedor de cursos inscritos */
+.inscritos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Pestañas para cambiar entre secciones */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.tab {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: #EDEDED;
+  color: #2607F2;
+  border: 2px solid #2607F2;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #7407F2;
+  color: white;
+}
+
+.tab.active {
+  background-color: #7407F2;
+  color: #EDEDED;
+  border-color: #7407F2;
+}
+
+/* Título en tarjetas (solo para Ecursos, no detalles) */
+.curso-titulo {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #2607F2;
+  margin: 0.5rem 0;
+}
+
+/* Descripción en tarjetas */
+.curso-descripcion {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+/* Espaciador para alinear contenido */
+.espaciador {
+  flex-grow: 1;
+}

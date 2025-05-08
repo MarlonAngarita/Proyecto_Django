@@ -1,0 +1,84 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EDEDED;
+    color: #7407F2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Cabecera */
+header {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Sección de categorías */
+.categorias {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid de categorías */
+.categoria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Cada categoría */
+.categoria-item {
+    padding: 20px;
+    background-color: #2607F2;
+    color: #EDEDED;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Botón de eliminación */
+.delete-btn {
+    margin-top: 10px;
+    background-color: #7407F2;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #5a05b2;
+}
+
+/* Formulario para agregar categorías */
+.formulario {
+    margin-top: 20px;
+}
+
+#nueva-categoria {
+    padding: 10px;
+    border: 1px solid #7407F2;
+    border-radius: 5px;
+}
+
+#agregar-categoria {
+    background-color: #2607F2;
+    color: #EDEDED;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.categoria-item img {
+    width: 200px;
+    height: 150px;
+}
